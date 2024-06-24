@@ -94,22 +94,11 @@ const Login: React.FC<LoginProps> = () => {
   useEffect(() => {
     const storedUserId = localStorage.getItem('userData');
     if (storedUserId) {
-      // Optionally, you can redirect the user if already logged in
-      // navigate('/');
     }
   }, []);
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {/* Background image container */}
-      <div
-        className="hidden lg:block flex-1 bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
-          flexGrow: 1,
-          flexShrink: 1,
-        }}
-      ></div>
 
       {/* Login form container */}
       <div className="flex-1 flex flex-col justify-center px-6 py-12 lg:px-8">
@@ -119,7 +108,7 @@ const Login: React.FC<LoginProps> = () => {
             <div className="flex items-center justify-center">
               <img
                 className="h-16 w-16 rounded-full"
-                src="https://www.shutterstock.com/shutterstock/photos/1849361008/display_1500/stock-vector-initial-based-hk-kh-logo-template-unique-monogram-alphabet-letters-design-and-vector-1849361008.jpg"
+                src="https://w7.pngwing.com/pngs/621/196/png-transparent-e-commerce-logo-logo-e-commerce-electronic-business-ecommerce-angle-text-service.png"
                 alt="Your Company"
               />
               <h2 className="ml-2 text-xl font-bold leading-9 text-gray-900">
@@ -166,12 +155,6 @@ const Login: React.FC<LoginProps> = () => {
                   >
                     Password
                   </label>
-                  <Link
-                    to="#"
-                    className="text-sm font-semibold text-indigo-600 hover:text-indigo-500"
-                  >
-                    Forgot password?
-                  </Link>
                 </div>
                 <div className="mt-1">
                   <input
@@ -197,7 +180,7 @@ const Login: React.FC<LoginProps> = () => {
               <div className="mt-6">
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-lg font-semibold text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-lg font-semibold text-white bg-gray-700 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Sign in
                 </button>

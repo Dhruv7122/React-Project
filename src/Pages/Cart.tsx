@@ -58,49 +58,9 @@ const Cart = () => {
         <div className="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
         <Link
             to="/cash-out"
-            className="rounded-full w-full max-w-[280px] py-4 text-center justify-center items-center bg-indigo-600 font-semibold text-lg text-white flex transition-all duration-500 hover:bg-indigo-700"
+            className="rounded-full w-full max-w-[280px] py-4 text-center justify-center items-center bg-indigo-600 font-semibold text-lg text-white flex transition-all duration-500 hover:bg-gray-700"
           >
-            Checkout with Card
-            <svg
-              className="ml-2"
-              xmlns="http://www.w3.org/2000/svg"
-              width="23"
-              height="22"
-              viewBox="0 0 23 22"
-              fill="none"
-            >
-              <path
-                d="M8.75324 5.49609L14.2535 10.9963L8.75 16.4998"
-                stroke="white"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
-
-          {/* Checkout with Card Button */}
-          <Link
-            to="/check-out"
-            className="rounded-full w-full max-w-[280px] py-4 text-center justify-center items-center bg-indigo-600 font-semibold text-lg text-white flex transition-all duration-500 hover:bg-indigo-700"
-          >
-            Checkout with Card
-            <svg
-              className="ml-2"
-              xmlns="http://www.w3.org/2000/svg"
-              width="23"
-              height="22"
-              viewBox="0 0 23 22"
-              fill="none"
-            >
-              <path
-                d="M8.75324 5.49609L14.2535 10.9963L8.75 16.4998"
-                stroke="white"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            Proceed to Buy
           </Link>
         </div>
       </div>

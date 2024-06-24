@@ -41,7 +41,7 @@ const Navbar = () => {
         
         {/* Links */}
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link to="/" className="mr-5 hover:text-white text-white">Home</Link>
+          <Link to="/all-products" className="mr-5 hover:text-white text-white">Home</Link>
           <Link to="/all-products" className="mr-5 hover:text-white text-white">Products</Link>
           <Link to="/cart" className="relative mr-5 flex items-center justify-center hover:text-white text-white">
             Cart

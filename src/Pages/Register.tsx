@@ -104,22 +104,13 @@ const Register: React.FC<RegisterProps> = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      <div
-        className="hidden lg:block flex-1 bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
-          flexGrow: 1,
-          flexShrink: 1,
-        }}
-      ></div>
-
       <div className="flex-1 flex flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm bg-white rounded-lg overflow-hidden shadow-lg">
           <div className="px-6 py-8 sm:px-10">
             <div className="flex items-center justify-center">
               <img
                 className="h-16 w-16 rounded-full"
-                src="https://www.shutterstock.com/shutterstock/photos/1849361008/display_1500/stock-vector-initial-based-hk-kh-logo-template-unique-monogram-alphabet-letters-design-and-vector-1849361008.jpg"
+                src="https://w7.pngwing.com/pngs/621/196/png-transparent-e-commerce-logo-logo-e-commerce-electronic-business-ecommerce-angle-text-service.png"
                 alt="Your Company"
               />
               <h2 className="ml-2 text-xl font-bold leading-9 text-gray-900">
@@ -215,7 +206,7 @@ const Register: React.FC<RegisterProps> = () => {
               <div className="mt-6">
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-lg font-semibold text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-lg font-semibold text-white bg-gray-700 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Register
                 </button>

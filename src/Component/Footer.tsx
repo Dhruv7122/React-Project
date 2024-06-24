@@ -9,13 +9,13 @@ const Footer: React.FC = () => {
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
           <Link to="/" className="flex title-font font-medium items-center md:justify-start justify-center text-white">
           <img
-              src="https://www.shutterstock.com/shutterstock/photos/1849361008/display_1500/stock-vector-initial-based-hk-kh-logo-template-unique-monogram-alphabet-letters-design-and-vector-1849361008.jpg"
-              alt="Harman Kardon Logo"
+              src="https://w7.pngwing.com/pngs/621/196/png-transparent-e-commerce-logo-logo-e-commerce-electronic-business-ecommerce-angle-text-service.png"
+              alt="My E-Commerce Site"
               className="w-12 h-12 rounded-full"
             />
-            <span className="ml-3 text-xl">HARMON KARDON</span>
+            <span className="ml-3 text-xl">My E-Commerce Site</span>
           </Link>
-          <p className="mt-2 text-sm text-gray-400">HARMON-KARDON Working Professional</p>
+          <p className="mt-2 text-sm text-gray-400">My E-Commerce Site Working Professional</p>
         </div>
         <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
           {[0, 1, 2, 3].map((item) => (
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="bg-gray-800">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-gray-400 text-sm text-center sm:text-left">© 2024 Dhruv-Bavadiya —
+          <p className="text-gray-400 text-sm text-center sm:text-left">© 2024 Dhruv-Sanghani —
             <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-500 ml-1" target="_blank">@Dhruv</a>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">

@@ -23,7 +23,7 @@ interface CartItem {
 
 export const fetchUserCartFromDatabase = async (userId: string): Promise<CartItem[]> => {
   try {
-    const response = await fetch(`${URL}/reactcart/${userId}`); // Adjust the API endpoint as per your backend setup
+    const response = await fetch(`${URL}/cart/${userId}`); // Adjust the API endpoint as per your backend setup
     
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
