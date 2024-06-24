@@ -1,20 +1,19 @@
 // App.tsx
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-// import { Landing } from "./Pages/Landing";
 import Footer from "./Component/Footer";
 import ProductListing from "./Pages/ProductListing";
 import { Specific } from "./Pages/Specific";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import { AuthContext, AuthProvider } from "./Context/authContext";
-import Cart from "./Pages/Cart";
 import { Provider } from "react-redux";
 import store from "./Store/store";
 import CheckoutPage from "./Pages/Checkout";
 import Navbar from "./Component/Navbar";
 import Cashout from "./Pages/Cashout";
 import Contact from "./Component/Contact";
+import Cart from "./Pages/Cart";
 
 
 function App() {

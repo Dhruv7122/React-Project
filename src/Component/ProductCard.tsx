@@ -11,7 +11,7 @@ export const ProductCard = ({ product }: { product: ProductType }) => {
   const { isLoggedIn, setIsLoggedIn, cartLength, setCartlength } =
     useContext(AuthContext);
   const dispatch = useDispatch();
-  const handleAddToCart = () => {
+  const handleAddToCart = async () => {
     const id = product._id;
     const name = product.name;
     const price = product.price;
@@ -29,6 +29,33 @@ export const ProductCard = ({ product }: { product: ProductType }) => {
         userId,
       })
     );
+
+    console.log(userId,id,quantity);
+    if (userId) {
+      try {
+        const response = await fetch('http://localhost:8000/cart', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            userId,
+            productId: id.toString(),
+            quantity,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to add item to cart on server');
+        }
+
+        const data = await response.json();
+        console.log('Item added to cart on server:', data);
+      } catch (error) {
+        console.error('Error adding item to cart on server:', error);
+      }
+    }
+    
     setCartlength(JSON.parse(localStorage.getItem("cartState") || "")?.length);
   };
 

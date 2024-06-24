@@ -1,14 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CartCard from "../Component/CartCard";
 import { useSelector } from "react-redux";
 import { RootState } from "../Store/store";
 import { Link } from "react-router-dom";
+import { fetchUserCartFromDatabase } from "../Service/product";
+
 
 const Cart = () => {
   const cartItems = useSelector((state: RootState) => state.cart.items);
 
   const calculateTotal = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
   };
 
   return (
@@ -56,7 +61,7 @@ const Cart = () => {
         </div>
 
         <div className="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
-        <Link
+          <Link
             to="/cash-out"
             className="rounded-full w-full max-w-[280px] py-4 text-center justify-center items-center bg-indigo-600 font-semibold text-lg text-white flex transition-all duration-500 hover:bg-gray-700"
           >

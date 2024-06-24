@@ -55,7 +55,7 @@ const Login: React.FC<LoginProps> = () => {
       const userData = await loginUser(email, password);
       console.log('User logged in:', userData);
 
-      localStorage.setItem('userData', JSON.stringify(userData._id));
+      localStorage.setItem('userData', userData._id);
       setIsLoggedIn(true);
       dispatch(updateUserId(userData._id));
 
@@ -64,18 +64,15 @@ const Login: React.FC<LoginProps> = () => {
       const userCartFromDB = await fetchUserCartFromDatabase(userData._id);
 
       // Compare with local storage cart items
-      const localStorageCart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const localStorageCart = JSON.parse(localStorage.getItem('cartState') || '[]');
       const updatedCart = [...localStorageCart];
+      // Array.isArray(localStorageCart);
 
       userCartFromDB.forEach((itemDB: any) => {
-        const existingItem = updatedCart.find((item: any) => item._id === itemDB._id);
-        if (!existingItem) {
-          updatedCart.push(itemDB);
-        }
+          localStorageCart.push(itemDB);
       });
-
       // Update local storage with merged cart items
-      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      localStorage.setItem('cartState', JSON.stringify(localStorageCart));
 
       // Navigate to home page after syncing cart items
       navigate('/');

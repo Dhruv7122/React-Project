@@ -14,23 +14,25 @@ export type ProductType = {
 // Define a type for the cart item (adjust according to your API response structure)
 interface CartItem {
   _id: string;
-  productName: string;
-  productDescription: string;
-  productPrice: number;
+  name: string;
+  description: string;
+  price: number;
   quantity: number;
-  imageSrc: string;
+  image: string;
 }
 
 export const fetchUserCartFromDatabase = async (userId: string): Promise<CartItem[]> => {
   try {
-    const response = await fetch(`${URL}/cart/${userId}`); // Adjust the API endpoint as per your backend setup
+    const response = await fetch(`${URL}/cart/${userId}`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-
+    
     const data = await response.json();
-    return data.cartItems; // Assuming response data contains the cart items
+    console.log(data);
+
+    return data;
   } catch (error) {
     console.error('Error fetching user cart:', error);
     throw new Error('Failed to fetch user cart data');
@@ -49,7 +51,7 @@ export const fetchUserCartFromDatabase = async (userId: string): Promise<CartIte
       return data;
     } catch (error) {
       console.error("Error fetching products:", error);
-      return []; // or handle error as needed (throw, return default data, etc.)
+      return []; 
     }
   };
   export const getProductById = async (id: string): Promise<ProductType> => {
@@ -62,7 +64,7 @@ export const fetchUserCartFromDatabase = async (userId: string): Promise<CartIte
       return data;
     } catch (error) {
       console.error('Error fetching product:', error);
-      throw error; // Rethrow the error or handle as needed
+      throw error; 
     }
   };
   
